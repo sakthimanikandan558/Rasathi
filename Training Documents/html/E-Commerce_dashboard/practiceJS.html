@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="sendChat"
+        class="sendChat w-[95%] m-auto pt-6 pb-6 flex flex-col gap-6 overflow-y-scroll lg:h-[61%] md:h-[65%] h-[64%]"
+        style="scrollbar-width: none; -ms-overflow-style: none;">
+
+        <div  class="chat-message flex flex-row lg:w-[80%] md:w-[80%] w-full gap-4">
+            <div class="self-end">
+                <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+            </div>
+            <div  id="starhover1"  class="starhover bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex flex-col p-4 space-y-4 lg:w-[90%] md:w-[90%] w-[85%]">
+                <div class="flex justify-between text-[#788693]">
+                    <div>
+                        <p class="font-bold">Gabo Expert</p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <div id="msgstar" class="msgstar hidden">
+                            <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                        </div>
+                        <p>09:19 PM</p>
+                    </div>
+                </div>
+                <div class="text-[#69717B]">
+                    <p>Test message test message test message test message test message test
+                        message test message test message test message
+                        test message test message test message
+                    </p>
+                </div>
+            </div>
+            <div id="starMenu" class="starMenu flex flex-row gap-2 border-2 h-[30px] p-1 w-[70px] hidden">
+                <div>
+                    <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                </div>
+                <div>
+                    <p>star</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="chat-message flex justify-end ">
+            <div class="flex flex-row lg:w-[80%] md:w-[80%] w-full gap-4">
+                <div id="starMenu" class="starMenu flex flex-row gap-2 border-2 h-[30px] p-1 w-[70px] hidden">
+                    <div>
+                        <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                    </div>
+                    <div>
+                        <p>star</p>
+                    </div>
+                </div>
+                <div id="starhover2"  class="starhover bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 lg:w-[90%] md:w-[90%] w-[85%]">
+                    <div class="flex justify-between text-[#DEE1F3]">
+                        <div>
+                            <p class="font-medium">John Doe</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <div id="msgstar" class="msgstar hidden">
+                                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                            </div>
+                            <p>09:21 PM</p>
+                        </div>
+                    </div>
+                    <div class="text-white">
+                        <p>Test message test message test message test message test message test
+                            message test message test message test message
+                            test message test message test message
+                        </p>
+                    </div>
+                </div>
+                <div class="self-end">
+                    <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-message flex justify-end lg:pr-4">
+            <div class="flex flex-row  gap-4">
+                <div id="starMenu" class="starMenu flex flex-row gap-2 border-2 h-[30px] p-1 w-[70px] hidden">
+                    <div>
+                        <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                    </div>
+                    <div>
+                        <p>star</p>
+                    </div>
+                </div>
+                <div id="starhover3"  class="starhover bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 ">
+                    <div class="flex justify-between text-[#DEE1F3]">
+                        <div>
+                            <p class="font-medium">John Doe</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <div id="msgstar" class="msgstar hidden">
+                                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                            </div>
+                            <p>09:22 PM</p>
+                        </div>
+                    </div>
+                    <div class="text-white bg-[#A1AADD] p-3 flex space-x-2 rounded-tr-3xl rounded-l-xl ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 13.5H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+                        </svg>
+                        <p class="pr-12">theme-settings.docx</p>
+                    </div>
+                </div>
+                <div class="self-end">
+                    <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-message flex flex-row lg:w-[80%] md:w-[80%] gap-4">
+            <div class="self-end ">
+                <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+            </div>
+            <div id="starhover4"  class="starhover bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex flex-col p-4 space-y-4 lg:w-[90%] md:w-[90%] w-[85%]">
+                <div class="flex justify-between text-[#788693]">
+                    <div>
+                        <p class="font-bold">Gabo Expert</p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <div id="msgstar" class="msgstar hidden">
+                            <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                        </div>
+                        <p>10:21 PM</p>
+                    </div>
+                </div>
+                <div class="text-[#69717B]">
+                    <p>Test message test message test message test message test message test
+                        message test message test message test message
+                        test message test message test message
+                    </p>
+                </div>
+            </div>
+            <div id="starMenu" class="starMenu flex flex-row gap-2 border-2 h-[30px] p-1 w-[70px] hidden">
+                <div>
+                    <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                </div>
+                <div>
+                    <p>star</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-message flex justify-end lg:pr-4">
+            <div class="flex flex-row lg:w-[60%] md:w-[70%] w-full gap-4">
+                <div id="starMenu" class="starMenu flex flex-row gap-2 border-2 h-[30px] p-1 w-[70px] hidden">
+                    <div>
+                        <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                    </div>
+                    <div>
+                        <p>star</p>
+                    </div>
+                </div>
+                <div id="starhover5"  class="starhover bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 lg:w-[90%] md:w-[90%] w-[85%]">
+                    <div class="flex justify-between text-[#DEE1F3]">
+                        <div>
+                            <p class="font-medium">John Doe</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <div id="msgstar" class="msgstar hidden">
+                                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                            </div>
+                            <p>10:23 PM</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="flex flex-col space-y-1 text-white">
+                            <img src="grid.png" alt="no image">
+                            <p>image-1.png</p>
+                        </div>
+                        <div class="flex flex-col space-y-1 text-white">
+                            <img src="grid.png" alt="no image">
+                            <p>image-2.png</p>
+                        </div>
+                        <div class="flex flex-col space-y-1 text-white">
+                            <img src="grid.png" alt="no image">
+                            <p>image-3.png</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="self-end">
+                    <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row gap-4">
+            <div class="self-end ">
+                <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+            </div>
+            <div class="bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex p-3 space-x-3">
+                <div class="w-[15px] h-[15px] rounded-full bg-[#929FAD] self-center mt-1"></div>
+                <div class="w-[15px] h-[15px] rounded-full bg-[#C5CED6] self-center mt-4"></div>
+                <div class="w-[15px] h-[15px] rounded-full bg-[#929FAD] self-center mt-1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+<!-- original -->
+
+<script>
+    // alert('welcome back Shami Kanna');
+    var dashBoard=document.getElementById('dashboard');
+    var details=document.getElementById('person');
+
+    function openDashboard(){
+        dashBoard.className='lg:w-[18%] md:w-[60%] w-full h-full border-r-2 lg:relative absolute';
+    }
+    function personDetails(){
+        details.className='lg:w-[25%]  w-full flex  lg:flex flex-col border-2 bg-[#FFFFFF] lg:h-[90%] md:h-[75%] h-[78%] overflow-y-scroll lg:relative absolute right-0 ';
+    }
+    function closeFun(){
+        dashBoard.className='hidden lg:block lg:w-[18%] border-r-2';
+    }
+    function closeProfile(){
+        details.className='hidden lg:w-[25%] lg:flex flex-col border-2 bg-[#FFFFFF] lg:h-[90%] overflow-y-scroll';
+    }
+    function send(){
+        let text=document.getElementById("textbox").value;
+        let newDiv = document.createElement('div');
+        const d = new Date();
+        let hour = d.getHours();
+        let minutes = d.getMinutes();
+
+        newDiv.innerHTML=`
+        <div class="flex justify-end ">
+            <div class="flex flex-row  gap-4 lg:pr-4">
+                <div class="bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 ">
+                    <div class="flex justify-between text-[#DEE1F3] space-x-2">
+                        <p class="font-medium">John Doe</p>
+                        <p>${hour}:${minutes} PM</p>
+                    </div>
+                    <div class="text-white">
+                        <p>${text}</p>
+                    </div>
+                </div>
+                <div class="self-end">
+                    <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                </div>
+            </div>
+        </div> 
+        `;
+        let parentElement = document.getElementById('sendChat');
+            if(text!=''){
+                parentElement.appendChild(newDiv);
+            }
+            document.getElementById("textbox").value="";
+            parentElement.scrollTop=parentElement.scrollHeight
+            
+    }
+
+    
+    const msgMenu = document.getElementById('msgMenu');
+    const starMessage = document.getElementById('msgstar'); 
+    const starmenu = document.getElementById('starMenu');
+    const dltMenu = document.getElementById('dltMenu');
+    const chat = document.getElementById('sendChat');
+    const dlt = document.getElementById('dlt');
+    const edit = document.getElementById('editmsg');
+    const editModal = document.getElementById('editModal');
+    const cancelEdit = document.getElementById('cancelEdit');
+    const saveEdit = document.getElementById('saveEdit');
+    const message = document.getElementById('message');
+    
+    
+
+
+
+    isstar=false;
+
+
+
+    starmenu.addEventListener('click',function(){
+        if(!isstar){
+            starMessage.classList.remove('hidden');
+            msgMenu.classList.add('hidden');
+
+            starmenu.innerHTML='unstar';
+            isstar=true;
+            localStorage.setItem('msgstar','show');
+            
+        } else {
+            starMessage.classList.add('hidden');
+            msgMenu.classList.add('hidden');
+            starmenu.innerHTML=`
+               
+            <div>
+                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+            </div>
+            <div>
+                <p>star</p>
+            </div>
+                                   
+            `;
+            isstar=false;
+            localStorage.removeItem('msgstar');
+        }
+        
+    });
+
+
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     if (localStorage.getItem('msgstar') === 'show') {
+    //         starMessage.classList.remove('hidden');
+    //         msgMenu.classList.add('hidden');
+    //         starmenu.innerHTML = "unstar";
+    //         isstar = true;
+    //     } else {
+    //         starMessage.classList.add('hidden');
+    //         msgMenu.classList.add('hidden');
+    //         starmenu.innerHTML = `
+    //             <div>
+    //                 <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+    //             </div>
+    //             <div>
+    //                 <p>star</p>
+    //             </div>`;
+    //         isstar = false;
+    //     }
+
+    //     if(localStorage.getItem('dltdmsg')==='deletedmsg'){
+    //         // dlt.classList.add('hidden');
+    //     }
+    // });
+    // console.log(localStorage);
+
+
+
+    function dltmsg(){
+
+        msgMenu.classList.add('hidden');
+
+        dlt.innerHTML= `
+        
+        <div id="dlt" class="flex flex-row lg:w-[80%] md:w-[80%] w-full gap-4">
+                                    <div class="self-end">
+                                        <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                    </div>
+                                    <div  class="chat-message bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex flex-col p-4 space-y-4">
+                                        <p>This message was deleted</p>
+                                    </div>
+                                    
+                                </div>
+
+        `;
+
+        localStorage.setItem('dltdmsg','deletedmsg');
+
+    }
+
+    function editmsg(){
+        var msg = message.innerText;
+        editModal.classList.remove('hidden');
+        msgMenu.classList.add('hidden');
+        
+        document.getElementById('editedMessage').value = msg;
+        saveEdit.addEventListener('click',function(){
+            
+            let text=document.getElementById("editedMessage").value;
+            
+            message.innerHTML =`<p>${text}</p>`;
+            editModal.classList.add('hidden');
+           
+         
+        });
+       
+        
+        
+        
+
+        cancelEdit.addEventListener('click',function(){
+            editModal.classList.add('hidden');
+        });
+        
+        
+       
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const messageContainers = document.querySelectorAll('.chat-message');
+        console.log(messageContainers)
+        let k=1;
+        messageContainers.forEach(container => {
+            // const messageId = container.getAttribute('id');
+            const messageId=document.getElementById("starhover"+k)
+            console.log(messageId)
+            const starButton = container.querySelector('.msgstar');
+            
+            const starMenu = container.querySelector('.starMenu');
+            // console.log(starMenu)
+            // console.log(messageId);
+            
+            
+
+            if (starButton) {
+                // Load star status from localStorage
+                let isStarred = localStorage.getItem(messageId) === 'true';
+
+                // Set initial state based on localStorage
+                if (isStarred) {
+                    starButton.classList.remove('hidden');
+                } else {
+                    starButton.classList.add('hidden');
+                }
+
+                // Toggle star status
+                function toggleStar() {
+                    isStarred = !isStarred;
+                    localStorage.setItem(messageId, isStarred); // Save status to localStorage
+                    if (isStarred) {
+                        starButton.classList.remove('hidden');
+                    } else {
+                        starButton.classList.add('hidden');
+                    }
+                }
+
+                // Add event listener only if the button exists
+                starButton.addEventListener('click', toggleStar);
+            }
+
+           
+            // Delete message
+            function deleteMessage() {
+                container.remove();
+            }
+            // console.log(messageId)
+            messageId.addEventListener('click',function(){
+            starMenu.classList.remove('hidden');
+            });
+
+    // chat.addEventListener('dblclick',function(){
+    //     msgMenu.classList.add('hidden');
+    // });
+        k++;
+        });
+    });
+
+</script>
+
+
+
+
+
+
+<!-- <script >
+    document.addEventListener('DOMContentLoaded', function () {
+        // const messageContainers = document.querySelectorAll('.chat-message');
+        // console.log(messageContainers);
+
+        // Load star status from localStorage
+        messageContainers.forEach(container => {
+            const messageId = container.getAttribute('id');
+            console.log(messageId)
+            const starButton = container.querySelector('.star-button');
+            const starIcon = container.querySelector('.star-icon');
+            let isStarred = localStorage.getItem(messageId) === 'true';
+            console.log(isStarred)
+
+            // Set initial state based on localStorage
+            if (isStarred) {
+                starButton.textContent = 'Unstar';
+                starIcon.classList.remove('hidden');
+            } else {
+                starButton.textContent = 'Star';
+                starIcon.classList.add('hidden');
+            }
+
+            // Toggle star status
+            function toggleStar() {
+                console.log("hi")
+                isStarred = !isStarred;
+                localStorage.setItem(messageId, isStarred); // Save status to localStorage
+                if (isStarred) {
+                    starButton.textContent = 'Unstar';
+                    starIcon.classList.remove('hidden');
+                } else {
+                    starButton.textContent = 'Star';
+                    starIcon.classList.add('hidden');
+                }
+            }
+
+            starButton.addEventListener('click', toggleStar);
+        });
+    });
+</script> -->
+
+</html>

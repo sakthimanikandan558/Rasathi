@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRIBBBLE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="overflow-hidden">
+        <div class="w-full h-screen flex flex-row">
+            <!-- dashboard -->
+            <div id="dashboard" class="lg:w-[18%] md:w-[60%] w-full h-full border-r-2 lg:block hidden transition-all ease-out duration-800">
+                <!-- carson image -->
+                <div class="p-3 bg-[#FFFFFF] h-[10%] w-full flex lg:justify-center justify-between">
+                    <img class="h-[60px] w-[200px] self-center" src="carson.png" alt="no image">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="md:size-8 size-7 self-center lg:hidden" onclick="closeFun()">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>                      
+                </div>
+                <!-- dashboard content -->
+                <div class="flex flex-col bg-[#F4F6F8] h-[90%]">
+                    <div class="flex-col  pt-[2rem] space-y-4">
+                        <div class="flex flex-row w-[90%] m-auto space-x-5 ">
+                            <div class="text-[#A6B0BC]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="size-7">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+                                </svg>
+                            </div>
+                            <div class="text-[#1B2733]">
+                                <p>Home</p>
+                            </div>
+                        </div>
+                        <div class="flex w-[90%] m-auto justify-between">
+                            <div class="flex flex-row space-x-5">
+                                <div class="text-[#A6B0BC]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="size-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                                    </svg>
+                                </div>
+                                <div class="text-[#1B2733]">
+                                    <p>Task Catalog</p>
+                                </div>
+                            </div>
+                            <div class="w-[35px] h-[25px] rounded-full bg-[#E0E4E9] text-[#68757D] text-center">
+                                <p class="">46</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-col  pt-[3rem]">
+                        <div class="flex justify-between w-[90%] m-auto ">
+                            <div class="text-[#707F8B] font-bold">
+                                <p>MY PROJECTS</p>
+                            </div>
+                            <div class="text-[#A6B0BC]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-[2rem] space-y-4">
+                            <div class="flex w-[90%] m-auto justify-between">
+                                <div class="flex flex-row space-x-5">
+                                    <div class="text-[#A6B0BC]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor" class="size-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                                        </svg>
+                                    </div>
+                                    <div class="text-[#1B2733]">
+                                        <p>Active</p>
+                                    </div>
+                                </div>
+                                <div class="w-[35px] h-[25px] rounded-full bg-[#B5E1FA] text-[#68757D] text-center">
+                                    <p class="">12</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row w-[90%] m-auto space-x-5 ">
+                                <div class="text-[#A6B0BC]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="size-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
+                                    </svg>
+                                </div>
+                                <div class="text-[#1B2733]">
+                                    <p>Completed</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row w-[90%] m-auto space-x-5 ">
+                                <div class="text-[#A6B0BC]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="size-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
+                                    </svg>
+                                </div>
+                                <div class="text-[#1B2733]">
+                                    <p>Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-col pt-[3rem]">
+                        <div class="flex justify-between w-[90%] m-auto ">
+                            <div class="text-[#707F8B] font-bold">
+                                <p>MY PLAN</p>
+                            </div>
+                            <div class="text-[#A6B0BC]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mt-[2rem] space-y-4">
+                            <div class="flex w-[90%] m-auto justify-between">
+                                <div class="flex flex-row space-x-5">
+                                    <div class="text-[#A6B0BC]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor" class="size-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5" />
+                                        </svg>
+                                    </div>
+                                    <div class="text-[#1B2733]">
+                                        <p>Subscribe</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-full bg-[#BCE6B5] text-[#5D736E] p-1 self-center text-[14px]">
+                                    <p class="">Save 40%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-col pt-[3rem]">
+                        <div class="flex justify-between w-[90%] m-auto ">
+                            <div class="text-[#707F8B] font-bold">
+                                <p>MORE</p>
+                            </div>
+                        </div>
+                        <div class="mt-[2rem] space-y-4">
+                            <div class="flex flex-row w-[90%] m-auto space-x-5 ">
+                                <div class="text-[#A6B0BC]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="size-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                    </svg>
+                                </div>
+                                <div class="text-[#1B2733]">
+                                    <p>Member Perks</p>
+                                </div>
+                            </div>
+                            <div class="flex w-[90%] m-auto justify-between">
+                                <div class="flex flex-row space-x-5">
+                                    <div class="text-[#A6B0BC]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2" stroke="currentColor" class="size-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                                        </svg>
+                                    </div>
+                                    <div class="text-[#1B2733]">
+                                        <p>Invite Friends</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-full bg-[#BCE6B5] text-[#5D736E] p-1 self-center text-[15px]">
+                                    <p class="">Earn $10</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row w-[90%] m-auto space-x-5 ">
+                                <div class="text-[#A6B0BC]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="size-7">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                                    </svg>
+                                </div>
+                                <div class="text-[#1B2733]">
+                                    <p>FAQ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:pt-[6rem] md:pt-[10rem] pt-[6rem]">
+                        <div class="flex flex-row w-[90%] m-auto space-x-5 ">
+                            <div class="text-[#A6B0BC]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                </svg>                                  
+                            </div>
+                            <div class="text-[#1B2733]">
+                                <p>Settings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-[82%] h-full w-full ">
+                <div class=" bg-[#FFFFFF] h-[10%] flex justify-end ">
+                    <div class="lg:w-[50%] flex flex flex-row justify-around  w-full">
+                        <!-- bar for dashboard in medium device -->
+                        <div onclick="openDashboard()" class="self-center lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:size-10  size-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>                              
+                        </div>
+                        <div class="flex flex-row self-center space-x-1">
+                            <div class="text-[#2C3742] lg:text-[16px] md:text-[16px] text-[11px] self-center">
+                                <p>Available credits: 4</p>
+                            </div>
+                            <div class="text-[#9CA7B4] ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="lg:size-6 md:size-6 size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="self-center">
+                            <div class="lg:p-3 md:p-3 p-2 border rounded-md text-[#444C57] bg-[#FEFEFF] lg:text-[16px] md:text-[16px] text-[11px]">
+                                <p>submit a new task</p>
+                            </div>
+                        </div>
+                        <div class="self-center text-[#9CA7B4]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="lg:size-7 md:size-7 size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+                            </svg>
+                        </div>
+                        <div class="hidden lg:flex flex-row self-center space-x-4">
+                            <div class="">
+                                <img class="h-[40px] w-[40px] rounded-full" src="img1.avif" alt="no image">
+                            </div>
+                            <div class="flex-col">
+                                <p class="text-[#1E2A36]">Store Name 1</p>
+                                <p class="text-[#89C2E9]">Subscribe Now!</p>
+                            </div>
+                            <div class="self-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="5"
+                                    stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- card for person detail in medium device -->
+                        <div onclick="personDetails()" class="self-center lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:size-10 size-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
+                            </svg>                              
+                        </div>
+                    </div>
+                </div>
+                <!-- active task -->
+                <div class="bg-[#F4F6F8] lg:h-[90%] md:h-[94%] h-[95%] flex flex-col space-y-6">
+                    <div class=" lg:pt-[2rem] pt-[1rem] w-full lg:space-y-6  space-y-3 ">
+                        <div class="flex flex-row space-x-2 text-[#657684] w-[95%] m-auto">
+                            <div class="self-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                    stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 19.5 8.25 12l7.5-7.5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p>Active Tasks</p>
+                            </div>
+                        </div>
+                        <div class="w-[95%] m-auto flex justify-between">
+                            <div class="text-[15px] lg:text-2xl md:text-2xl font-bold self-center">
+                                <p>Task #1234 Task Name</p>
+                            </div>
+                            <div class="flex flex-row space-x-4 ">
+                                <div class="flex flex-row space-x-3 bg-[#BCE6B5] rounded-full lg:h-[30px] lg:w-20 p-1 self-center md:h-[30px] md:w-20 h-[20px] w-[10]">
+                                    <div class="w-[10px] h-[10px] lg:w-[15px] lg:h-[15px] md:w-[15px] md:h-[15px] rounded-full bg-[#4FB939] self-center"></div>
+                                    <div class="text-[#556468] self-center lg:text-[15px] md:text-[15px] text-[10px]">
+                                        <p>active</p>
+                                    </div>
+                                </div>
+                                <div class="self-center">
+                                    <div class="lg:p-3 md:p-3 p-2 border rounded-md text-[#444C57] bg-[#FEFEFF]">
+                                        <p class="lg:text-[16px] md:text-[16px] text-[10px]">submit a new task</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- chat & Task Description -->
+                    <div class="w-full lg:w-[95%] m-auto  flex flex-row lg:gap-6 h-[87%] lg:h-[80.5%] md:h-[83.5%]">
+                        <div class="lg:w-[75%]  border-2 bg-[#FFFFFF] w-full ">
+                            <div class="w-full border-b-2">
+                                <div class="lg:w-[95%] md:w-[95%] w-full flex lg:justify-between md:justify-between justify-around m-auto">
+                                    <div class="flex flex-row lg:space-x-10 md:space-x-10 space-x-4">
+                                        <div class="font-medium lg:text-[20px] md:text-[20px] text-[15px] border-b-4 border-[#5C6AC5] lg:pt-5 md:pt-5 pt-2">
+                                            <p>Chat</p>
+                                        </div>
+                                        <div class="font-medium lg:text-[20px] md:text-[20px] text-[15px] lg:pt-5 md:pt-5 pt-2 text-[#647582]">
+                                            <p>Task Description</p>
+                                        </div>
+                                    </div>
+                                    <div class="lg:p-3 md:p-3 p-1 flex flex-row space-x-6">
+                                        <div class="text-[#A4AFBA] flex space-x-1">
+                                            <p class="text-[12px] self-center lg:flex md:flex hidden">{ / }</p>
+                                            <p class="bg-[#EDF0F1] text-[#3E9BE8]  self-center rounded-md lg:text-[16px] md:text-[16px] text-[11px]">Development
+                                            </p>
+                                        </div>
+                                        <div class="border-2 rounded-md flex space-x-1">
+                                            <div class="lg:p-2 md:p-2 p-1 text-[#9BA7B3]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="3" stroke="currentColor" class="lg:size-5 md:size-5 size-4">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                                </svg>
+                                            </div>
+                                            <div class="lg:p-2 md:p-2 p-1 lg:pr-12 md:pr-12 pr-6 text-[#9BA7B3] lg:text-[16px] md:text-[16px] text-[13px]">
+                                                <p class="flex justify-start">Search chat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- chat start -->
+                            <div id="editModal" class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 z-50 flex justify-center items-center hidden">
+                                <div class="bg-white rounded-lg p-8 w-[40%]">
+                                    <h2 class="text-xl font-semibold mb-4">Edit Message</h2>
+                                    <textarea id="editedMessage" class="w-full h-32 border border-gray-300 rounded-md p-2 mb-4"></textarea>
+                                    <div class="flex justify-end">
+                                        <button id="cancelEdit" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md mr-2">Cancel</button>
+                                        <button id="saveEdit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sendChat" class=" w-[95%] m-auto pt-6 pb-6 flex flex-col gap-6 overflow-y-scroll lg:h-[61%] md:h-[65%] h-[64%]"
+                                style="scrollbar-width: none; -ms-overflow-style: none;">
+
+                                <div id="dlt" class="chat-message flex flex-row inline-block gap-4">
+                                    <div class="self-end">
+                                        <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                    </div>
+                                    <div  id="starhover" class="bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex flex-col p-4 space-y-4 ]">
+                                        <div class="flex justify-between text-[#788693]">
+                                            <div><p class="font-bold">Gabo Expert</p></div>
+                                            <div class="flex space-x-2">
+                                                <div id="msgstar" class="msgstar hidden">
+                                                    <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                                </div>
+                                                <p>09:19 PM</p>
+                                            </div>  
+                                        </div>
+                                        <div class="text-[#69717B]">
+                                            <div id="message">
+                                                <p>Test message test message test message test message test message test message</p>
+                                                <p>test message test message test message test message test message test message</p>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                    <div id="msgMenu" class="msgMenu flex flex-col w-[90px]  border-2 h-[90px] hidden">
+                                        <div  id="starMenu" class="starMenu flex flex-row gap-2 border-b-2  p-1">
+                                            <div>
+                                                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                            </div>
+                                            <div>
+                                                <p>star</p>
+                                            </div>
+                                        </div>
+                                        <div id="dltMenu" onclick="dltmsg()" class="dltMenu text-center border-b-2 "><p>delete</p></div>
+                                        <div id="editmsg" onclick="editmsg()" class="editmsg text-center"><p>edit</p></div>
+                                    </div>
+
+                                     
+                                    
+                                </div>
+
+                                <div id="dlt2" class="chat-message flex justify-end ">
+                                    <div class="flex flex-row lg:w-[80%] md:w-[80%] w-full gap-4">
+                                        <div id="msgMenu" class="msgMenu flex flex-col w-[90px]  border-2 h-[90px] hidden">
+                                            <div  id="starMenu" class="starMenu flex flex-row gap-2 border-b-2  p-1">
+                                                <div>
+                                                    <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                                </div>
+                                                <div>
+                                                    <p>star</p>
+                                                </div>
+                                            </div>
+                                            <div id="dltMenu" onclick="dltmsg()" class="dltMenu text-center border-b-2 "><p>delete</p></div>
+                                            <div id="editmsg" onclick="editmsg()" class="editmsg text-center"><p>edit</p></div>
+                                        </div>
+                                        <div class="chat-message bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 lg:w-[90%] md:w-[90%] w-[85%]">
+                                            <div class="flex justify-between text-[#DEE1F3]">
+                                                <div><p class="font-medium">John Doe</p></div>
+                                                <div class="flex space-x-2">
+                                                    <div id="msgstar" class="msgstar hidden">
+                                                        <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                                    </div>
+                                                    <p>09:21 PM</p>
+                                                </div>  
+                                            </div>
+                                            <div class="text-white">
+                                                <p>Test message test message test message test message test message test
+                                                    message test message test message test message
+                                                    test message test message test message
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="self-end">
+                                            <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="dlt3" class="chat-message flex justify-end lg:pr-4 ">
+                                    <div class="flex flex-row  gap-4">
+                                        <div id="msgMenu" class="msgMenu flex flex-col w-[90px]  border-2 h-[90px] hidden">
+                                            <div  id="starMenu" class="starMenu flex flex-row gap-2 border-b-2  p-1">
+                                                <div>
+                                                    <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                                </div>
+                                                <div>
+                                                    <p>star</p>
+                                                </div>
+                                            </div>
+                                            <div id="dltMenu" onclick="dltmsg()" class="dltMenu text-center border-b-2 "><p>delete</p></div>
+                                            <div id="editmsg" onclick="editmsg()" class="editmsg text-center"><p>edit</p></div>
+                                        </div>
+                                        <div class="chat-message bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 ">
+                                            <div class="flex justify-between text-[#DEE1F3]">
+                                                <div><p class="font-medium">John Doe</p></div>
+                                                <div class="flex space-x-2">
+                                                    <div id="msgstar" class="msgstar hidden">
+                                                        <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                                    </div>
+                                                    <p>09:22 PM</p>
+                                                </div> 
+                                            </div>
+                                            <div class="text-white bg-[#A1AADD] p-3 flex space-x-2 rounded-tr-3xl rounded-l-xl ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M15 13.5H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
+                                                </svg>
+                                                <p class="pr-12">theme-settings.docx</p>
+                                            </div>
+                                        </div>
+                                        <div class="self-end">
+                                            <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="dlt4" class="chat-message flex flex-row lg:w-[80%] md:w-[80%] gap-4">
+                                    <div class="self-end ">
+                                        <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                    </div>
+                                    <div class="chat-message bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex flex-col p-4 space-y-4 lg:w-[90%] md:w-[90%] w-[85%]">
+                                        <div class="flex justify-between text-[#788693]">
+                                            <div><p class="font-bold">Gabo Expert</p></div>
+                                            <div class="flex space-x-2">
+                                                <div id="msgstar" class="msgstar hidden">
+                                                    <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                                </div>
+                                                <p>10:21 PM</p>
+                                            </div> 
+                                        </div>
+                                        <div class="text-[#69717B]">
+                                            <p>Test message test message test message test message test message test
+                                                message test message test message test message
+                                                test message test message test message
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="msgMenu" class="msgMenu flex flex-col w-[90px]  border-2 h-[90px] hidden">
+                                        <div  id="starMenu" class="starMenu flex flex-row gap-2 border-b-2  p-1">
+                                            <div>
+                                                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                            </div>
+                                            <div>
+                                                <p>star</p>
+                                            </div>
+                                        </div>
+                                        <div id="dltMenu" onclick="dltmsg()" class="dltMenu text-center border-b-2 "><p>delete</p></div>
+                                        <div id="editmsg" onclick="editmsg()" class="editmsg text-center"><p>edit</p></div>
+                                    </div>
+                                </div>
+
+                                <div id="dlt5" class="chat-message flex justify-end lg:pr-4">
+                                    <div class="flex flex-row lg:w-[60%] md:w-[70%] w-full gap-4">
+                                        <div id="msgMenu" class="msgMenu flex flex-col w-[90px]  border-2 h-[90px] hidden">
+                                        <div  id="starMenu" class="starMenu flex flex-row gap-2 border-b-2  p-1">
+                                            <div>
+                                                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                            </div>
+                                            <div>
+                                                <p>star</p>
+                                            </div>
+                                        </div>
+                                        <div id="dltMenu" onclick="dltmsg()" class="dltMenu text-center border-b-2 "><p>delete</p></div>
+                                        <div id="editmsg" onclick="editmsg()" class="editmsg text-center"><p>edit</p></div>
+                                    </div>
+                                        <div class="chat-message bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 lg:w-[90%] md:w-[90%] w-[85%]">
+                                            <div class="flex justify-between text-[#DEE1F3]">
+                                                <div><p class="font-medium">John Doe</p></div>
+                                                <div class="flex space-x-2">
+                                                    <div id="msgstar" class="msgstar hidden">
+                                                        <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                                                    </div>
+                                                    <p>10:23 PM</p>
+                                                </div> 
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-2">
+                                                <div class="flex flex-col space-y-1 text-white">
+                                                    <img src="grid.png" alt="no image">
+                                                    <p>image-1.png</p>
+                                                </div>
+                                                <div class="flex flex-col space-y-1 text-white">
+                                                    <img src="grid.png" alt="no image">
+                                                    <p>image-2.png</p>
+                                                </div>
+                                                <div class="flex flex-col space-y-1 text-white">
+                                                    <img src="grid.png" alt="no image">
+                                                    <p>image-3.png</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="self-end">
+                                            <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-row gap-4">
+                                    <div class="self-end ">
+                                        <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                    </div>
+                                    <div class="bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex p-3 space-x-3">
+                                        <div class="w-[15px] h-[15px] rounded-full bg-[#929FAD] self-center mt-1"></div>
+                                        <div class="w-[15px] h-[15px] rounded-full bg-[#C5CED6] self-center mt-4"></div>
+                                        <div class="w-[15px] h-[15px] rounded-full bg-[#929FAD] self-center mt-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- attachment-->
+                            <div class="lg:p-3 md:p-3 p-4 flex lg:flex flex-row justify-around lg:w-[95%] m-auto w-full overflow-x-scroll" style="scrollbar-width: none; -ms-overflow-style: none;">
+                                <div class="p-2 border-2 self-center flex space-x-3 rounded-md">
+                                    <p class="lg:text-2xl md:text-2xl text-xl self-center">A</p>
+                                    <p class="self-center lg:text-[16px] md:text-[16px] text-[10px]">Normal text</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="3" stroke="currentColor" class="size-3 self-center">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
+                                <div class="border-2 rounded-md flex self-center">
+                                    <div class="lg:p-3 md:p-3 p-2 font-bold border-r-2 self-center">
+                                        <p class="lg:text-[16px] md:text-[16px] text-[14px]">Bold</p>
+                                    </div>
+                                    <div class="lg:p-3 md:p-3 p-2 border-r-2">
+                                        <i class="lg:text-[16px] md:text-[16px] text-[14px]">italic</i>
+                                    </div>
+                                    <div class="lg:p-3 md:p-3 p-2 underline border-r-2">
+                                        <p class="lg:text-[16px] md:text-[16px] text-[14px]">Underline</p>
+                                    </div>
+                                    <div class="lg:p-3 md:p-3 p-2 lg:text-[15px] md:text-[14px] text-[13px] self-center">
+                                        <p>small</p>
+                                    </div>
+                                </div>
+                                <div class="border-2 rounded-md flex self-center">
+                                    <div class="p-2 font-bold border-r-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="3" stroke="currentColor" class="size-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                        </svg>
+                                    </div>
+                                    <div class="p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="4" stroke="currentColor" class="size-7">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="p-2 border-2 self-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                                    </svg>
+                                </div>
+                                <div class="lg:p-2 md:p-2 p-1 border-2 self-center flex lg:space-x-3 md:space-x-3 space-x-1 lg:pr-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="lg:size-5 md:size-5 size-4 self-center">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                                    </svg>
+                                    <p class="lg:text-[16px] md:text-[16px] text-[10px]">Attach File</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="p-2 w-[95%] m-auto flex flex-col space-y-4">
+                                <p class="text-[#768591] text-xl">write your message</p>
+                                <div class="flex flex-row w-full  justify-between">
+                                    <div class="w-[90%]">
+                                        <input type="text" id="textbox"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3"/>
+                                    </div>
+                                    <div class="w-[5%] self-center"> 
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" onclick="send()">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                                        </svg>                                          
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div id="person" class="lg:w-[25%] md:w-[60%] w-full flex hidden lg:flex flex-col border-2 bg-[#FFFFFF] lg:h-[90%] h-screen overflow-y-scroll " style="scrollbar-width: none; -ms-overflow-style: none;">
+                            <div class="p-4 flex flex-col space-y-4">
+                                <div class="flex justify-between font-medium text-[20px]">
+                                    <p>Developer</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-5 lg:hidden" onclick="closeProfile()">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                    </svg>                                      
+                                </div>
+                                <div class="flex space-x-2">
+                                    <div class="">
+                                        <img src="chat1.jpeg" alt="no image" class="h-[60px] w-[60px] rounded-full">
+                                    </div>
+                                    <div class="flex flex-col self-center font-light">
+                                        <p>Gabo Expert</p>
+                                        <p class="text-[#7B8A96]">Local time: Mon,21:39</p>
+                                    </div>
+                                </div>
+                            </div><hr>
+                            <div class="p-4 flex flex-col space-y-4">
+                                <div class="font-medium text-[20px]">
+                                    <p>Store</p>
+                                </div>
+                                <div class="flex flex-col space-y-1 font-light">
+                                    <p>Store Amazing</p>
+                                    <p class="text-[#3698DA]">storeamazing.com</p>
+                                    <p>ID: <span class="text-[#798793]">J4TKTDCCM5RG</span></p>
+                                </div>
+                            </div><hr>
+                            <div class="p-4 flex flex-col space-y-4">
+                                <div class="font-medium text-[20px]">
+                                    <p>First Deliverable</p>
+                                </div>
+                                <div class="font-light">
+                                    <p>15 Sep 2018</p>
+                                </div>
+                            </div><hr>
+                            <div class="p-4 flex flex-col space-y-6">
+                                <div class="flex justify-between">
+                                    <div class="font-medium text-[20px]">
+                                        <p>Files</p>
+                                    </div>
+                                    <div class="border-2 p-2 flex space-x-2 rounded-md">
+                                        <p>Upload</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 transform rotate-180 self-center">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25" />
+                                        </svg>                                          
+                                    </div>
+                                </div>
+                                <div class="flex flex-col space-y-6">
+                                    <div class="flex justify-between">
+                                        <div><p class="text-[#9BA5AE]">Merchant Files</p></div>
+                                        <div class="flex space-x-1">
+                                            <p>4</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 text-[#9BA5AE]">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25" />
+                                            </svg> 
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <div class="flex justify-between">
+                                            <div><p class="text-[#68B1E3]">2-backgroundimage.png</p></div>
+                                            <div class="text-[#9BA5AE] self-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 ">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                                </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <div><p class="text-[#68B1E3]">3-headerimage.png</p></div>
+                                            <div class="text-[#9BA5AE] self-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 ">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                                </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <div><p class="text-[#68B1E3]">removecode.png</p></div>
+                                            <div class="text-[#9BA5AE] self-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 ">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                                </svg>                                                  
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <div><p class="text-[#68B1E3]">modifytext.png</p></div>
+                                            <div class="text-[#9BA5AE] self-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 ">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                                </svg>                                                  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col space-y-6">
+                                    <div class="flex justify-between">
+                                        <div><p class="text-[#9BA5AE]">Developer Files</p></div>
+                                        <div class="flex space-x-1">
+                                            <p>2</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5 text-[#9BA5AE]">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25" />
+                                            </svg> 
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <div class="flex justify-start">
+                                            <div><p class="text-[#68B1E3]">2-backgroundimageedit.png</p></div>
+                                        </div>
+                                        <div class="flex justify-start">
+                                            <div><p class="text-[#68B1E3]">3-headerimageedit.png</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-start">
+                                    <p class="text-[#9BA5AE]">Max upload size is 20 MB</p>
+                                </div>
+                            </div><hr>
+                            <div class="p-4 flex flex-row justify-between">
+                                <div class="border-2 p-2 rounded-md">
+                                    <p>Split Task</p>
+                                </div>
+                                <div class="text-[#C20B14] border-2 border-[#C20B14] p-2 rounded-md">
+                                    <p>Cancel Task</p>
+                                </div>
+                            </div><hr>
+                            <div class="p-4 text-[#B5BDC4]">
+                                <p>Report a problem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    // alert('welcome back Shami Kanna');
+    var dashBoard=document.getElementById('dashboard');
+    var details=document.getElementById('person');
+
+    function openDashboard(){
+        dashBoard.className='lg:w-[18%] md:w-[60%] w-full h-full border-r-2 lg:relative absolute transition-all ease-out duration-800 ';
+    }
+    function personDetails(){
+        details.className='lg:w-[25%]  w-full flex  lg:flex flex-col border-2 bg-[#FFFFFF] lg:h-[90%] md:h-[75%] h-[78%] overflow-y-scroll lg:relative absolute right-0 ';
+    }
+    function closeFun(){
+        dashBoard.className='hidden lg:block lg:w-[18%] border-r-2 transition-all duration-600';
+    }
+    function closeProfile(){
+        details.className='hidden lg:w-[25%] lg:flex flex-col border-2 bg-[#FFFFFF] lg:h-[90%] overflow-y-scroll';
+    }
+    function send(){
+        let text=document.getElementById("textbox").value;
+        let newDiv = document.createElement('div');
+        const d = new Date();
+        let hour = d.getHours();
+        let minutes = d.getMinutes();
+
+        newDiv.innerHTML=`
+        <div class="flex justify-end ">
+            <div class="flex flex-row  gap-4 lg:pr-4">
+                <div class="bg-[#5C6AC5] rounded-tr-3xl rounded-l-xl flex flex-col p-4 space-y-4 ">
+                    <div class="flex justify-between text-[#DEE1F3] space-x-2">
+                        <p class="font-medium">John Doe</p>
+                        <p>${hour}:${minutes} PM</p>
+                    </div>
+                    <div class="text-white">
+                        <p>${text}</p>
+                    </div>
+                </div>
+                <div class="self-end">
+                    <img src="img1.avif" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                </div>
+            </div>
+        </div> 
+        `;
+        let parentElement = document.getElementById('sendChat');
+            if(text!=''){
+                parentElement.appendChild(newDiv);
+            }
+            document.getElementById("textbox").value="";
+            parentElement.scrollTop=parentElement.scrollHeight
+            
+    }
+
+    star = document.getElementById('starhover');
+    
+    const msgMenu = document.getElementById('msgMenu');
+    const starMessage = document.getElementById('msgstar'); 
+    const starmenu = document.getElementById('starMenu');
+    const dltMenu = document.getElementById('dltMenu');
+    const chat = document.getElementById('sendChat');
+    const dlt = document.getElementById('dlt');
+    const edit = document.getElementById('editmsg');
+    const editModal = document.getElementById('editModal');
+    const cancelEdit = document.getElementById('cancelEdit');
+    const saveEdit = document.getElementById('saveEdit');
+    const message = document.getElementById('message');
+    
+    
+
+
+
+    isstar=false;
+
+    star.addEventListener('click',function(){
+        msgMenu.classList.remove('hidden');
+    });
+
+    chat.addEventListener('dblclick',function(){
+        msgMenu.classList.add('hidden');
+    });
+
+    starmenu.addEventListener('click',function(){
+        if(!isstar){
+            starMessage.classList.remove('hidden');
+            msgMenu.classList.add('hidden');
+
+            starmenu.innerHTML='unstar';
+            isstar=true;
+            localStorage.setItem('msgstar','show');
+            
+        } else {
+            starMessage.classList.add('hidden');
+            msgMenu.classList.add('hidden');
+            starmenu.innerHTML=`
+               
+            <div>
+                <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+            </div>
+            <div>
+                <p>star</p>
+            </div>
+                                   
+            `;
+            isstar=false;
+            localStorage.removeItem('msgstar');
+        }
+        
+    });
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        if (localStorage.getItem('msgstar') === 'show') {
+            starMessage.classList.remove('hidden');
+            msgMenu.classList.add('hidden');
+            starmenu.innerHTML = "unstar";
+            isstar = true;
+        } else {
+            starMessage.classList.add('hidden');
+            msgMenu.classList.add('hidden');
+            starmenu.innerHTML = `
+                <div>
+                    <img src="star.png" alt="no image" class="h-[20px] w-[20px]">
+                </div>
+                <div>
+                    <p>star</p>
+                </div>`;
+            isstar = false;
+        }
+
+        if(localStorage.getItem('dltdmsg')==='deletedmsg'){
+            // dlt.classList.add('hidden');
+        }
+    });
+    console.log(localStorage);
+
+
+
+    function dltmsg(){
+
+        msgMenu.classList.add('hidden');
+
+        dlt.innerHTML= `
+        
+        <div id="dlt" class="flex flex-row lg:w-[80%] md:w-[80%] w-full gap-4">
+                                    <div class="self-end">
+                                        <img src="chat1.jpeg" alt="no image" class="h-[50px] w-[50px] rounded-full">
+                                    </div>
+                                    <div  class="chat-message bg-[#F3F4FA] rounded-tl-3xl rounded-r-xl flex flex-col p-4 space-y-4">
+                                        <p>This message was deleted</p>
+                                    </div>
+                                    
+                                </div>
+
+        `;
+
+        localStorage.setItem('dltdmsg','deletedmsg');
+
+    }
+
+    function editmsg(){
+        var msg = message.innerText;
+        editModal.classList.remove('hidden');
+        msgMenu.classList.add('hidden');
+        
+        document.getElementById('editedMessage').value = msg;
+        saveEdit.addEventListener('click',function(){
+            
+            let text=document.getElementById("editedMessage").value;
+            
+            message.innerHTML =`<p>${text}</p>`;
+            editModal.classList.add('hidden');
+           
+         
+        });
+       
+        
+        
+        
+
+        cancelEdit.addEventListener('click',function(){
+            editModal.classList.add('hidden');
+        });
+        
+        
+       
+    }
+
+</script>
+
+</html>

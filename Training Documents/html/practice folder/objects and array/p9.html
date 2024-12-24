@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>problem 9</title>
+</head>
+<body>
+  <h1>Object Length</h1>
+  
+  <script>
+    let myObject = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    };
+
+    //Using Object.keys()
+    let objectLength1 = Object.keys(myObject).length;
+
+    //Using Object.entries()
+    let objectLength2 = Object.entries(myObject).length;
+
+    document.write("<p>Object length using Object.keys(): " + objectLength1 + "</p>");
+    document.write("<p>Object length using Object.entries(): " + objectLength2 + "</p>");
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+*{
+    margin:0;
+}
+            
+.header {
+background-color: rgb(0, 0, 0);
+padding:15px;
+}
+.header ul li{   
+     display: inline;
+}
+.header a {
+    margin: 0;
+    font-size:20px;
+    color:white;
+    text-decoration: none;
+    padding:10px;
+}
+.header a:hover {
+    background-color:green;
+    color:white;
+}   
+
+.image {
+    margin:30px 18%;
+    width:50%;
+}
+
+.split {
+display: flex;
+justify-content: space-around;
+}
+.split1 {
+    display:flex;
+    justify-content: space-between;
+    line-height:1.4;
+    font-size:19px;
+    padding-left:10px;
+}
+.offer img{
+    width:650px;
+    height:400px;
+    padding-left:20px;
+}
+.html_img img{
+    width:650px;
+    height:400px;
+    padding-left:20px;
+}
+.description {
+    display: flex;
+    justify-content: center;
+}
+.desc1 {
+    padding-right:80px;
+    margin-left:20px;
+}
+.desc {
+    padding-right:40px;
+    display:flex;
+    justify-content: center;
+    line-height:1.4;
+    font-size:19px;
+
+}
+            
+.contact {
+    display: flex;
+    background-color:black;
+    color:white;
+    justify-content: center;
+                
+}
+.info {
+     margin-right:120px;
+    padding-left:20px;
+    padding-top:30px;
+                
+}
+.info a{
+    text-decoration: none;
+    color:yellow;
+}
+.info a:hover{
+    color:brown;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color:white;
+    color:black;
+    padding-left:20px;
+}
+.follow {
+    margin-right:50px;
+    padding-top:30px;
+                
+}
+.follow a{
+    padding-right:10px;
+    text-decoration: none;
+    color:yellow;
+}
+.follow a:hover{
+    color:brown;
+}
+h2 {
+    color:rgb(50, 50, 124);
+}

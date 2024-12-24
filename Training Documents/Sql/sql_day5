@@ -1,0 +1,88 @@
+select * from example_data;
+select * from employees;
+select * from student;
+
+--table for procedure
+CREATE TABLE employees (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    salary NUMERIC(10, 2)
+);
+
+
+create or replace procedure sample() language plpgsql
+as $$
+declare 
+	emp_count INT;
+	emp_info record;
+	
+begin 
+	SELECT COUNT(*) INTO emp_count FROM employees;
+    RAISE NOTICE 'Total number of employees: %', emp_count;
+	for emp_info in
+	execute 'select * from employees'
+	loop
+	raise notice 'row: %',emp_info;
+	end loop;
+
+end;
+$$;
+
+call sample();
+
+select * from student;
+CREATE TABLE student (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(100)
+);
+
+INSERT INTO student (name, department) VALUES
+    ('John Doe', 'Computer Science'),
+    ('Jane Smith', 'Mathematics'),
+    ('Alice Johnson', 'Physics'),
+    ('Bob Brown', 'Biology'),
+    ('Emma Wilson', 'Chemistry');
+
+--create procedure student
+
+create or replace procedure studentpro() language plpgsql
+as $$
+declare 
+	emp_info record;
+	sid int;
+    sname VARCHAR(100);
+    sdepartment VARCHAR(100);
+
+begin
+ --Display student names
+	raise notice 'student name:';
+for sname in select name from student
+loop
+raise notice '%',sname;
+end loop;
+
+update student set department= (case name when 'Jane Smith' then 'Maths' when 'Alice Johnson' then 'biology' when 'Bob Brown' then 'chemistry' when 'Emma Wilson' then 'physics' when 'John Doe' then 'computer science' end) where name in('Jane Smith','Alice Johnson','Bob Brown','Emma Wilson','John Doe');
+
+
+raise notice 'student_name  department';
+
+
+
+for sname,sdepartment in
+	select name,department from student
+	loop
+	raise notice '% %',sname,sdepartment;
+end loop;
+
+raise notice 'hello here i execute a sample loop';
+for emp_info in 
+	select * from student order by id
+loop
+	raise notice '% % %',emp_info.id,emp_info.name,emp_info.department;
+end loop;
+end;
+$$
+
+call studentPro();
+

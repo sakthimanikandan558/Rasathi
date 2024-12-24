@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <div class="column">
+
+        <div class="container">
+           
+            <form action="#" method="post">
+                <h2>Register Here!</h2>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+                
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character." required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br>
+    
+                <label for="Account">Choose a Account:</label>
+    
+                <select name="Account" id="Account">
+                  <option value="Public">Public</option>
+                  <option value="Private">Private</option>
+                </select> <br><br>
+                
+                <label for="gender">Gender: </label>
+                
+                <label for="male"><input type="radio" id="male" name="gender" value="male" required>Male</label>
+                
+                <label for="female"><input type="radio" id="female" name="gender" value="female" required>Female</label>
+                
+                <br><label for="favcolor">Select your favorite color:</label>
+                <input type="color" id="favcolor" name="favcolor"><br>
+    
+                <br><label for="myfile">Passport Size Photo</label>
+                <input type="file" id="myfile" name="myfile">
+    
+                <br><br><label for="quantity">Category(between 1 and 5):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+    
+                <br><br><label for="vol">Volume (between 0 and 100):</label>
+                <input type="range" id="vol" name="vol" min="0" max="50">
+    
+                <br><label for="comment">comments</label>
+                <textarea id="comments" name="cmt" rows="5" cols="50"></textarea>
+                
+                <br><br><input type="checkbox" id="terms" name="terms" required>
+                <b>I agree to the terms and conditions</b>
+                
+                <br><br><input type="submit" value="Register">
+                <input type="reset" value="Cancel">
+            </form>
+        </div>
+        <div class="right">
+            <div class="image">
+                <h3> <i><span><mark> REGISTER QUICKLY!!!</mark></span></i></b></p></h3>
+                <img src="https://c8.alamy.com/comp/2EJ714X/welcome-to-zoo-cartoon-poster-with-lion-elephant-giraffe-tiger-hippopotamus-antelope-monkeys-vector-illustration-2EJ714X.jpg" alt=""no image>
+            </div>
+            <div class="video">
+                <h3><i><mark>Watch a Video of our zoo...</mark></i></h3>
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+            <div class="audio">
+                <h3><i><mark>Audio of a Lion Roar</mark></i></h3>
+                <audio controls>
+                    <source src="lion.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                  
+            </div>
+        </div>
+        
+    </div>
+    
+</body

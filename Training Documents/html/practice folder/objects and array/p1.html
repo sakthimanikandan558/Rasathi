@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem 1</title>
+</head>
+<body>
+    <h2>
+        Print employers name whose score is bigger than 4
+    </h2>
+    <p id="employee"></p>
+</body>
+<script>
+   const employers = [
+  { name: "Rasathi", score: 5 },
+  { name: "Rathi", score: 3 },
+  { name: "Shami", score: 3 },
+  { name: "jason", score: 2 },
+  { name: "John", score: 4 }
+  ];
+
+function getEmployersWithScoreGreaterThan(employerList) {
+  const highScoringEmployers = [];
+  for (let i = 0; i < employerList.length; i++) {
+    if(employerList[i]['score'] > 3) {
+        highScoringEmployers.push(employerList[i].name);
+      }
+  }
+  return highScoringEmployers;
+}
+
+const result = getEmployersWithScoreGreaterThan(employers);
+document.getElementById('employee').innerHTML = `
+    Employers with score bigger than 3 are: ${result.join(', ')}
+`;
+console.log(result);
+</script>
+</html>

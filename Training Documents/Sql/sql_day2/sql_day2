@@ -1,0 +1,86 @@
+select * from department;
+select * from project;
+select * from employee;
+
+-- 1.department table
+create table Department(department_ID serial not null primary key,department_name varchar(20) unique,department_key varchar(20));
+
+--4. Insert valid datas 
+insert into department(department_name) values ('back-end');
+insert into department(department_name) values ('front-end');
+insert into department(department_name) values ('designer');
+insert into department(department_name) values ('testing');
+
+--5 department_key column based on department name (using case)
+update department set department_key=(case department_name when 'back-end' then 'java' when 'front-end' then 'react js' when 'designer' then 'canva' when 'testing' then 'manual testing' end) where department_name in('back-end','front-end','designer','testing');
+
+--2.project table
+create table project(project_ID serial primary key,project_name varchar(20) not null unique,is_active boolean default true,department_ID int,start_date date,end_date date,foreign key(department_ID) references department(department_ID));
+
+--4. Insert valid datas 
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('kalyan matrimony',false,3,'04/05/2023','05/06/2023');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('course era',true,1,'12/05/2024','06/07/2024');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('Udemy',false,2,'06/05/2020','05/07/2020');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('ajio',false,4,'08/12/2023','01/02/2024');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('instagram',true,3,'08/05/2024','12/08/2024');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('whatsapp',true,1,'02/05/2024','18/09/2024');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('spotify',true,2,'31/03/2021','28/06/2021');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('meesho',false,4,'04/05/2020','05/07/2020');
+insert into project(project_name,department_ID,start_date,end_date) values ('amazon',3,'02/05/2024','21/07/2024');
+insert into project(project_name,department_ID,start_date,end_date) values ('twitter',1,'18/05/2024','31/08/2024');
+insert into project(project_name,is_active,department_ID,start_date,end_date) values ('flipcart',false,2,'02/05/2024','05/07/2024');
+insert into project(project_name,department_ID,start_date,end_date) values ('snapchat',4,'04/05/2024','05/06/2024');
+
+--3.Employee table
+create table employee(empid serial primary key,empname varchar(20) not null,project_ID int,salary float,is_active boolean default true,foreign key(project_ID) references project(project_ID));
+
+--4. Insert valid datas 
+insert into employee(empname,project_id,salary) values ('A',1,20000);
+insert into employee(empname,project_id,salary) values ('B',1,45000);
+insert into employee(empname,project_id,salary) values ('C',2,30000);
+insert into employee(empname,project_id,salary) values ('D',3,90000);
+insert into employee(empname,project_id,salary) values ('E',4,25000);
+insert into employee(empname,project_id,salary) values ('F',5,27000);
+insert into employee(empname,project_id,salary,is_active) values ('G',6,40000,false);
+insert into employee(empname,project_id,salary) values ('H',7,70000);
+insert into employee(empname,project_id,salary,is_active) values ('I',8,80000,false);
+insert into employee(empname,project_id,salary) values ('J',9,28000);
+insert into employee(empname,project_id,salary) values ('K',10,50000);
+insert into employee(empname,project_id,salary,is_active) values ('L',11,60000,false);
+insert into employee(empname,project_id,salary) values ('M',12,75000);
+insert into employee(empname,project_id,salary) values ('N',1,85000);
+insert into employee(empname,project_id,salary) values ('O',2,10000);
+insert into employee(empname,project_id,salary,is_active) values ('P',3,12000,false);
+insert into employee(empname,project_id,salary) values ('Q',4,55000);
+insert into employee(empname,project_id,salary) values ('R',5,18000);
+insert into employee(empname,project_id,salary,is_active) values ('S',6,17000,false);
+insert into employee(empname,project_id,salary) values ('T',7,100000);
+insert into employee(empname,project_id,salary) values ('U',8,16000);
+insert into employee(empname,project_id,salary,is_active) values ('V',9,15000,false);
+insert into employee(empname,project_id,salary) values ('W',10,200000);
+insert into employee(empname,project_id,salary) values ('X',11,58000);
+insert into employee(empname,project_id,salary,is_active) values ('Y',12,65000,false);
+insert into employee(empname,project_id,salary) values ('Z',1,14500);
+insert into employee(empname,project_id,salary,is_active) values ('shami',2,13500,false);
+insert into employee(empname,project_id,salary) values ('Rasathi',3,13000);
+insert into employee(empname,project_id,salary,is_active) values ('Jason',4,150000,false);
+insert into employee(empname,project_id,salary) values ('Raji',5,250000);
+
+--6. projects start_date from may 1st to current date
+select project_name from project where start_date between '01/05/2024' and '14/05/2024';
+
+--7. employees who had salary more than 25000 and less than 10000
+
+select empname,salary from employee where salary>25000;
+
+--7. employees who had salary less than 10000
+select empname,salary from employee where salary<20000;
+
+--8. employees based on salary - who had most salary - active employees
+
+select empname,salary from employee where is_active=true  order by salary desc;
+
+--9. active projects with department_id 1,2,3 and start date is greater than may 1st
+select project_name,department_ID,start_date from project where start_date>'01/05/2024';
+
+

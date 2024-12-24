@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>problem 10</title>
+</head>
+<body>
+  <h1>total value of the inventory</h1>
+  
+  <script>
+    let inventory = [
+      { name: "Laptop", price: 1000, quantity: 5 },
+      { name: "Phone", price: 500, quantity: 10 },
+      { name: "Tablet", price: 300, quantity: 7 }
+    ];
+
+    // Function to calculate the total value of the inventory
+    function calculateInventoryValue(inventory) {
+      let totalValue = 0;
+      for (let product of inventory) {
+        totalValue = product.price * product.quantity;
+
+        document.write("<p>Total Inventory Value of the "+product.name+": $" + totalValue + "</p>");
+      }
+      
+      
+    }
+
+    calculateInventoryValue(inventory);
+    
+  </script>
+</body>
+</html>

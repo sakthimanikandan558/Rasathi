@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert vs SweetAlert</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- sweet alert cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <div class="text-center mt-[10rem] space-x-10">
+        <h1 class="text-3xl font-bold mb-6">Alert vs SweetAlert</h1>
+        <button id="normalAlertBtn"
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition duration-300 ease-in-out mb-4">
+            I am a normal alert
+        </button>
+        <button id="sweetAlertBtn"
+            class="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 transition duration-300 ease-in-out">
+            I am a SweetAlert
+        </button>
+    </div>
+
+    <script>
+
+        function showNormalAlert() {
+            alert('This is a normal alert message!');
+        }
+
+
+        function showSweetAlert() {
+            Swal.fire({
+                title: 'SweetAlert Title',
+                text: 'This is a SweetAlert message!',
+                icon: 'info',
+                confirmButtonText: 'bye'
+            });
+        }
+
+        document.getElementById('normalAlertBtn').addEventListener('click', showNormalAlert);
+        document.getElementById('sweetAlertBtn').addEventListener('click', showSweetAlert);
+    </script>
+</body>
+
+</html>

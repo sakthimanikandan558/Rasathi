@@ -1,0 +1,45 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>problem 3</title>
+    </head>
+    <body>
+     <p id="demo"></p>   
+    </body>
+    <script>
+       //original array
+var arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+
+
+var total_count_of_individual_element = 1;
+var count_of_element = 0;
+var item;
+
+
+for (var i = 0; i < arr1.length; i++) {
+    
+    for (var j = i; j < arr1.length; j++) {
+       
+        if (arr1[i] == arr1[j])
+            count_of_element++;
+        
+        if (total_count_of_individual_element < count_of_element) {
+            total_count_of_individual_element = count_of_element;
+            item = arr1[i];
+        }
+    }
+    // Reset
+    count_of_element = 0;
+}
+
+document.getElementById('demo').innerHTML=`
+    most frequent item in an array [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3] is <br> ${item} : ${total_count_of_individual_element} times
+`;
+// Output the most frequent item and its frequency
+console.log(item + " ( " + total_count_of_individual_element + " times ) ");
+
+
+    </script>
+    </html>

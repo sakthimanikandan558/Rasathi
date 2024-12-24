@@ -1,0 +1,27 @@
+select * from student;
+
+--table creation
+	create table student(Rollno serial primary key,name varchar(50),department varchar(50),phone_no bigint);
+
+insert into student(name,department,phone_no) values ('Raji','IT',1234567890),
+('shami','CSE',2341567890),
+('kali','ECE',2314562789),
+('priya','MECH',1232456890),
+('balaji','EEE',1278906532);
+
+alter table student add column marks int; 
+update student set marks=(case rollno when 1 then 76 when 2 then 98 when 3 then 90 
+	when 4 then 56 when 5 then 93 when 6 then 98 when 7 then 76 
+	when 8 then 48 when 9 then 90 
+	when 10 then 98 end) where rollno in(1,2,3,4,5,6,7,8,9,10);
+--group by
+select department,count(*) from student group by department;
+
+--MAX
+select name,marks as highest_mark from student where marks=(select max(marks) from student) limit 1;
+
+--MIN
+select min(phone_no) from student;
+
+--AVG
+select average of phone

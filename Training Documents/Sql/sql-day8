@@ -1,0 +1,110 @@
+select * from student;
+
+create table student(Rollno serial primary key,First_name varchar(20),Last_name varchar(20),DOB date,Department varchar(40),Grade decimal(4,2));
+
+INSERT INTO student (First_name, Last_name, DOB, Department, Grade) VALUES
+    ('Alice', 'Smith', '2000-05-10', 'Computer Science', 85.5),
+    ('Bob', 'Johnson', '2001-08-15', 'Electrical Engineering', 92.3),
+    ('Charlie', 'Brown', '2000-12-20', 'Mechanical Engineering', 78.9),
+    ('David', 'Miller', '2002-03-25', 'Computer Science', 91.2),
+    ('Ella', 'Davis', '2001-06-30', 'Civil Engineering', 79.8),
+    ('Frank', 'Wilson', '2002-10-05', 'Electrical Engineering', 88.6),
+    ('Grace', 'Martinez', '2000-01-15', 'Computer Science', 94.0),
+    ('Henry', 'Taylor', '2001-04-20', 'Mechanical Engineering', 82.7),
+    ('Ivy', 'Anderson', '2002-07-25', 'Civil Engineering', 75.4),
+    ('Jack', 'Thomas', '2000-11-30', 'Computer Science', 90.1);
+
+
+--view 
+create view view_table as select * from student;
+select * from view_table;
+
+alter table view_table rename column first_name to name;
+--rename view
+alter view view_table rename  to vtable;
+
+
+
+select * from admin.admin_tabl;
+select * from users.user_table;
+--create schema
+create schema admin authorization admin;
+create schema users;
+
+CREATE TABLE exadmin.admin_table (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+CREATE TABLE exuser.user_table (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+
+INSERT INTO exadmin.admin_table (username, email) VALUES
+    ('admin1', 'admin1@example.com'),
+    ('admin2', 'admin2@example.com'),
+    ('admin3', 'admin3@example.com'),
+    ('admin4', 'admin4@example.com'),
+    ('admin5', 'admin5@example.com');
+
+INSERT INTO exuser.user_table (username, email) VALUES
+    ('user1', 'user1@example.com'),
+    ('user2', 'user2@example.com'),
+    ('user3', 'user3@example.com'),
+    ('user4', 'user4@example.com'),
+    ('user5', 'user5@example.com');
+
+
+--role creation
+
+
+create role userrole login password 'user';
+
+create role adminrole login password 'raji';
+
+--returns all schemas from the current database
+SELECT *  FROM pg_catalog.pg_namespace ORDER BY nspname;
+
+
+
+create schema exadmin;
+create schema exuser;
+
+set role postgres;
+
+
+GRANT usage ON SCHEMA exadmin TO adminrole;
+GRANT usage ON SCHEMA exuser TO adminrole;
+GRANT usage ON SCHEMA exuser TO userrole;
+
+
+
+grant all privileges on exadmin.admin_table to adminrole;
+grant all privileges on exuser.user_table to adminrole;
+grant all privileges on  exuser.user_table to userrole;
+
+
+
+revoke ALL PRIVILEGES ON SCHEMA exadmin from adminrole;
+revoke ALL PRIVILEGES ON SCHEMA exuser from adminrole;
+revoke ALL PRIVILEGES ON SCHEMA exuser from userrole;
+
+select * from exuser.user_table;
+select * from exadmin.admin_table;
+select current_user;
+
+drop role userrole;
+set role adminrole;
+set role userrole;
+set role postgres;
+reset role;
+
+INSERT INTO exadmin.admin_table (id,username, email) VALUES
+    (90,'admin1', 'admin1@example.com');
+
+INSERT INTO exuser.user_table (username, email) VALUES
+    ('user1', 'user1@example.com');

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Data</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css">
+    <script>
+        $(document).ready(function () {
+            var jsondata = [{ "Userid": "1", "Username": "Rasathi", "Age": "20", "Email": "rasathi@praniontech.com","Country":"India","Course":"IT" },
+             { "Userid": "2", "Username": "John", "Age": "20", "Email": "john@praniontech.com","Country":"Australia","Course":"IT" },
+             { "Userid": "3", "Username": "Ram", "Age": "20", "Email": "ram@praniontech.com","Country":"England","Course":"IT" }, 
+            { "Userid": "4", "Username": "Vijay", "Age": "20", "Email": "vijay@praniontech.com","Country":"America","Course":"IT" }];
+            new DataTable('#jsondata',{
+                data:jsondata ,
+                columns:[
+                    {data:'Userid'},
+                    {data:'Username'},
+                    {data:'Country'},
+                    {data:'Course'},
+                    {data:'Age'},
+                    {data:'Email'}
+
+                ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table id="jsondata" style="width:100%">
+        <thead>
+            <tr>
+                <th>Userid</th>
+                <th>Username</th>
+                <th>Country</th>
+                <th>course</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+select * from student;
+create table student(Rollno serial primary key,First_name varchar(20),Last_name varchar(20),DOB date,Department varchar(40),Grade decimal(4,2));
+
+INSERT INTO student (First_name, Last_name, DOB, Department, Grade) VALUES
+    ('Alice', 'Smith', '2000-05-10', 'Computer Science', 85.5),
+    ('Bob', 'Johnson', '2001-08-15', 'Electrical Engineering', 92.3),
+    ('Charlie', 'Brown', '2000-12-20', 'Mechanical Engineering', 78.9),
+    ('David', 'Miller', '2002-03-25', 'Computer Science', 91.2),
+    ('Ella', 'Davis', '2001-06-30', 'Civil Engineering', 79.8),
+    ('Frank', 'Wilson', '2002-10-05', 'Electrical Engineering', 88.6),
+    ('Grace', 'Martinez', '2000-01-15', 'Computer Science', 94.0),
+    ('Henry', 'Taylor', '2001-04-20', 'Mechanical Engineering', 82.7),
+    ('Ivy', 'Anderson', '2002-07-25', 'Civil Engineering', 75.4),
+    ('Jack', 'Thomas', '2000-11-30', 'Computer Science', 90.1);
+
+
+--sql string function
+select First_name,ascii(First_name) from student;	--ascii
+select First_name,char_length(First_name) as length_of_Name from student;  --char length
+select first_name,last_name,concat(first_name,' ',last_name) as full_name from student;   --concat
+select dob,concat_ws(' ',first_name,last_name,department) from student; --concat_ws->add a separator between .
+
+
+--sql date function
+select first_name from student where dob=(select date('2002-07-25'));
+select current_date;
+select first_name,(current_date-dob)/365 as age from student; --age calculating
+select current_time;
+select current_time(2);
+select current_timestamp;
+select statement_timestamp();
+select now();
+select now()::timestamp;
+select now()+interval '10 day';
+select now()+interval '1 hour 32 minutes';
+select current_date and current_timestamp;
+select coalesce(first_name,'') from student;
+
+select * from student;
+select extract(month from date '2000-05-10') m from student;  --month funtion
+select dob,to_char(dob,'yyyy month dd') from student; 
+select rollno,to_char(dob,'Month') from student;
+select rollno,to_char(dob,'day') from student;
+select log(grade) from student; --give log value
+select log(2,grade) from student; -- give log value to a specified base
+select round(grade) from student; 
+select upper(first_name) ,upper(last_name) from student; --uppercase
+select lower(first_name) ,lower(last_name) from student; --lowercase
+
+--use the COALESCE function to handle NULL
+
+CREATE TABLE posts (
+  id serial primary key, 
+  title VARCHAR (255) NOT NULL, 
+  excerpt VARCHAR (150), 
+  body TEXT, 
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+  updated_at TIMESTAMP
+);
+
+INSERT INTO posts (title, excerpt, body)
+VALUES
+      ('test post 4','a','test post body 4')
+      
+RETURNING *;
+
+select * from posts;
+
+--coalesce function to handle the null
+select title,coalesce( excerpt,'unknown') as nullfunction from posts;
+
+
+
+

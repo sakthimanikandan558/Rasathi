@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Form Handling and File Operations</title>
+</head>
+<body>
+
+<?php
+    // Define variables and initialize with empty values
+    $name = $email = $dob = "";
+    $nameErr = $emailErr = $dobErr = "";
+
+    // Function to sanitize input data
+    function sanitize_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    // Form validation
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Validate name
+        if (empty($_POST["name"])) {
+            $nameErr = "Name is required";
+        } else {
+            $name = sanitize_input($_POST["name"]);
+            // Check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+                $nameErr = "Only letters and white space allowed";
+            }
+        }
+        
+        // Validate email
+        if (empty($_POST["email"])) {
+            $emailErr = "Email is required";
+        } else {
+            $email = sanitize_input($_POST["email"]);
+            // Check if email address is well-formed
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $emailErr = "Invalid email format";
+            }
+        }
+        
+        // Validate date of birth
+        if (empty($_POST["dob"])) {
+            $dobErr = "Date of Birth is required";
+        } else {
+            $dob = sanitize_input($_POST["dob"]);
+            // Check if date is valid and in correct format
+            if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $dob)) {
+                $dobErr = "Invalid date format (YYYY-MM-DD)";
+            }
+        }
+        
+        // If all fields are valid, process the form
+        if (empty($nameErr) && empty($emailErr) && empty($dobErr)) {
+            // Example: Displaying input values
+            echo "<h2>Input Details:</h2>";
+            echo "Name: $name <br>";
+            echo "Email: $email <br>";
+            echo "Date of Birth: $dob <br>";
+            
+            // Example: File handling - writing to a file
+            $file = fopen("data.txt", "a");
+            fwrite($file, "Name: $name, Email: $email, Date of Birth: $dob\n");
+            fclose($file);
+            
+            // Example: File handling - reading from a file
+            echo "<h2>Previous Entries:</h2>";
+            $file = fopen("data.txt", "r");
+            while (!feof($file)) {
+                echo fgets($file) . "<br>";
+            }
+            fclose($file);
+        }
+    }
+?>
+
+<h2>PHP Form Validation Example</h2>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    Name: <input type="text" name="name" value="<?php echo $name;?>">
+    <span class="error">* <?php echo $nameErr;?></span>
+    <br><br>
+    Email: <input type="text" name="email" value="<?php echo $email;?>">
+    <span class="error">* <?php echo $emailErr;?></span>
+    <br><br>
+    Date of Birth: <input type="date" name="dob" value="<?php echo $dob;?>">
+    <span class="error">* <?php echo $dobErr;?></span>
+    <br><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>

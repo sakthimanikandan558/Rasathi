@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hwb(209 74% 0%);
+    margin: 0;
+    padding: 0;
+ }
+.column{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.container {
+    width:90%;
+    display : flex;
+    justify-content:center; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    height: auto;
+    text-align: center;
+
+}
+.image {
+    margin-bottom:9%;
+    padding: 50px;
+}
+.image img {
+
+    width: 70%; /* Make image fill the width of the div */
+    height: 70%; /* Maintain aspect ratio */
+}
+
+.video {
+    margin-top:-110px;
+}
+       
+.video video{
+    width: 70%;
+    background-color:black;
+    
+}
+.audio audio{
+      width:70%;      
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+input[type="text"], input[type="email"] ,input[type="tel"], input[type="date"], input[type="password"] {
+    width: 110%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+input[type="submit"] {
+    background: hsl(125, 59%, 38%);
+    color: #131211;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 90px;
+}
+input[type="reset"]{
+    background: hsl(0, 2%, 67%);
+    color: #131211;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 90px;
+}
+input[type="color"] {
+    width:100px;
+    height:30px;
+}
+
+#Account {
+    width:115%;
+    height:35px;
+}
+input[type="number"] {
+    width:112%;
+    height:30px;
+
+}
+        
+input[type="submit"]:hover {
+    background: hsl(212, 89%, 48%);
+    color:white;
+}
+
+input[type="reset"]:hover {
+    background: hsl(2, 68%, 47%);
+    color:white;
+}
+
+input[type="file"] {
+    font-size:19px;
+}
+
+#comments {
+   width:105%
+}
+        

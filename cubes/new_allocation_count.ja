@@ -1,0 +1,47 @@
+cube(`new_allocation_count`, {
+  sql_table: `public.new_allocation_count`,
+  
+  data_source: `default`,
+  
+  joins: {
+  
+     
+  },
+  
+  dimensions: {
+    id: {
+      sql: `id`,
+      type: `number`,
+      primary_key: true
+    },
+    
+    agent_email: {
+      sql: `agent_email`,
+      type: `string`
+    },
+    
+    adm_users_id: {
+      sql: `adm_users_id`,
+      type: `number`
+    },
+    
+    allocated_profiles_count: {
+      sql: `allocated_profiles_count`,
+      type: `number`
+    },
+    
+    calldate: {
+      sql: `calldate::date`,
+      type: `time`
+    }
+  },
+  
+  measures: {
+    
+  },
+  
+  pre_aggregations: {
+    // Pre-aggregation definitions go here.
+    // Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+  }
+});

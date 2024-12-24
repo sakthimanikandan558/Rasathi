@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <div class="flex gap-2">
+            <div class="w-16 h-16 rounded-full bg-cyan-200 flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d042ef79f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-12 h-12 rounded-full" alt="">
+            </div>
+            <div class="w-16 h-16 rounded-full bg-cyan-200 flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1529626455595-c20c099c08a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-12 h-12 rounded-full" alt="">
+            </div>
+            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1534528741775-54b2f3b1f789?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-12 h-12 rounded-full" alt="">
+            </div>
+            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-xl font-bold">
+                +4
+            </div>
+        </div>
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-bold">Project List</h2>
+            <input type="text" class="border border-gray-300 rounded-md px-3 py-2" placeholder="Search Project">
+        </div>
+        <table class="w-full border border-gray-300 rounded-md overflow-hidden">
+            <thead>
+                <tr>
+                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-500 font-medium"></th>
+                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-500 font-medium">PROJECT</th>
+                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-500 font-medium">LEADER</th>
+                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-500 font-medium">TEAM</th>
+                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-500 font-medium">PROGRESS</th>
+                    <th class="py-3 px-4 bg-gray-100 text-left text-gray-500 font-medium">ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="projectTableBody">
+                <tr>
+                    <td class="py-3 px-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" value="">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                </svg>
+                            </div>
+                            <span>Website SEO</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">Eileen</td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 mr-1"></div>
+                            <span class="text-sm font-medium text-gray-500">+4</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 rounded-full h-2.5" style="width: 38%"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-gray-500">
+                        <span class="font-medium">38%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" value="">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                </svg>
+                            </div>
+                            <span>Social Banners</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">Owen</td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 mr-1"></div>
+                            <span class="text-sm font-medium text-gray-500">+2</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 rounded-full h-2.5" style="width: 45%"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-gray-500">
+                        <span class="font-medium">45%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" value="">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                </svg>
+                            </div>
+                            <span>Logo Designs</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">Keith</td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 mr-1"></div>
+                            <span class="text-sm font-medium text-gray-500">+1</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 rounded-full h-2.5" style="width: 92%"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-gray-500">
+                        <span class="font-medium">92%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" value="">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                </svg>
+                            </div>
+                            <span>IOS App Design</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">Merline</td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 mr-1"></div>
+                            <span class="text-sm font-medium text-gray-500">+1</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 rounded-full h-2.5" style="width: 56%"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-gray-500">
+                        <span class="font-medium">56%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" value="">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                </svg>
+                            </div>
+                            <span>Figma Dashboards</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">Harmonia</td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 mr-1"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 rounded-full h-2.5" style="width: 25%"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-gray-500">
+                        <span class="font-medium">25%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" value="">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                </svg>
+                            </div>
+                            <span>Crypto Admin</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">Allyson</td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 mr-1"></div>
+                            <span class="text-sm font-medium text-gray-500">+1</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 rounded-full h-2.5" style="width: 36%"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-gray-500">
+                        <span class="font-medium">36%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600" value="">
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center mr-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                                </svg>
+                            </div>
+                            <span>Create Website</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">Georgie</td>
+                    <td class="py-3 px-4">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 rounded-full bg-blue-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-green-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-purple-500 mr-1"></div>
+                            <div class="w-6 h-6 rounded-full bg-yellow-500 mr-1"></div>
+                            <span class="text-sm font-medium text-gray-500">+3</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 rounded-full h-2.5" style="width: 72%"></div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4 text-gray-500">
+                        <span class="font-medium">72%</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z" />
+                        </svg>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mt-4 flex justify-between items-center">
+            <p>Showing 1 to 7 of 10 entries</p>
+            <div class="flex">
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-500 font-medium rounded-md px-2 py-1 mr-2 disabled:cursor-not-allowed" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-medium rounded-md px-2 py-1 mr-2 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-300" id="page1">
+                    1
+                </button>
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-500 font-medium rounded-md px-2 py-1 mr-2" id="page2">
+                    2
+                </button>
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-500 font-medium rounded-md px-2 py-1" id="page3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+

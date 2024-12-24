@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>problem 2</title>
+</head>
+<body>
+  <h1>Bubble Sort</h1>
+  <div id="output"></div>
+
+  <script>
+    // Function to perform bubble sort
+    function bubbleSort(arr) {
+      let n = arr.length;
+      let swapped;
+      do {
+        swapped = false;
+        for (let i = 0; i < n - 1; i++) {
+          if (arr[i] > arr[i + 1]) {
+            // Swap elements
+            let temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+            swapped = true;
+          }
+        }
+      } while (swapped);
+      return arr;
+    }
+
+    
+    let array = [64, 34, 25, 12, 22, 11, 90];
+    
+    //unsorted array
+    document.getElementById('output').innerHTML += "<p>Unsorted Array: " + array.join(", ") + "</p>";
+    
+    // bubble sort
+    let sortedArray = bubbleSort(array);
+    document.getElementById('output').innerHTML += "<p>Sorted Array: " + sortedArray.join(", ") + "</p>";
+  </script>
+</body>
+</html>

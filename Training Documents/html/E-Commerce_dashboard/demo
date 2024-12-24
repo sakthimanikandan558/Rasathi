@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional styling */
+        .menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #f9fafb;
+            border: 1px solid #cbd5e0;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col justify-between">
+    <div class="container mx-auto py-8 flex-grow">
+        <div id="chat" class="flex flex-col gap-4 p-4 overflow-y-auto max-h-screen">
+            <!-- Chat messages will be added here dynamically -->
+        </div>
+    </div>
+    <div class="p-4 bg-gray-200 flex justify-between items-center">
+        <input id="messageInput" type="text" placeholder="Type a message..." class="rounded-full px-4 py-2 flex-grow mr-4">
+        <button id="sendMessageButton" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-4 py-2">
+            Send
+        </button>
+    </div>
+
+    <!-- Message Menu Template -->
+    <div id="menuTemplate" class="menu">
+        <button id="starButton" class="border rounded-full px-2 py-1">Star</button>
+    </div>
+
+    <script>
+        // Sample messages data
+        const messages = [
+            { sender: 'Alice', text: 'Hey Bob, how are you?' },
+            { sender: 'Bob', text: 'Hi Alice! I\'m good, thanks for asking.' }
+        ];
+
+        // Render messages
+        function renderMessages() {
+            const chat = document.getElementById('chat');
+            chat.innerHTML = '';
+            messages.forEach(message => {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('flex', 'justify-between', 'relative', 'group');
+                messageDiv.innerHTML = `
+                    <div class="bg-gray-100 px-4 py-2 rounded-lg">
+                        <span class="font-semibold">${message.sender}:</span> ${message.text}
+                    </div>
+                    <div class="menu absolute right-0 top-0 hidden group-hover:block">
+                        <button class="border rounded-full px-2 py-1">${message.starred ? 'Unstar' : 'Star'}</button>
+                    </div>
+                `;
+                chat.appendChild(messageDiv);
+            });
+        }
+
+        // Event listener for sending a message
+        document.getElementById('sendMessageButton').addEventListener('click', function() {
+            const messageInput = document.getElementById('messageInput');
+            const messageText = messageInput.value.trim();
+            if (messageText !== '') {
+                messages.push({ sender: 'Alice', text: messageText, starred: false });
+                messageInput.value = '';
+                renderMessages();
+            }
+        });
+
+        // Render initial messages
+        renderMessages();
+    </script>
+</body>
+</html>

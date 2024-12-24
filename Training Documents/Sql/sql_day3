@@ -1,0 +1,37 @@
+select * from task2;
+create table task2(empid serial,empname varchar(20),salary int,place varchar(20));
+alter table task2 add constraint pk_task2 primary key (empname,empid);
+drop table task2;
+alter table task2 drop constraint pk_task2;
+insert into task2(empid,empname,salary,place) values (1,'Rathi',20000,'sivakasi');
+SELECT constraint_name FROM information_schema.table_constraints WHERE table_name = 'task2' AND constraint_type = 'PRIMARY KEY';
+ALTER TABLE task2 DROP CONSTRAINT pk_task2;
+create index indexoftask on task2 (salary,place);
+select indexoftask	 from task2;
+CREATE TABLE Persons (
+    personID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (personID)
+);
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+insert into persons(personid,firstname,lastname,age) values (1,'abc','def',20);
+insert into persons(personid,firstname,lastname,age) values (2,'raji','ijar',23);
+insert into persons(personid,firstname,lastname,age) values (3,'rathi','ihtar',25);
+select * from persons;
+
+insert into orders(orderid,ordernumber,personid) values (1,5,3);
+insert into orders(orderid,ordernumber,personid) values (2,1,2);
+insert into orders(orderid,ordernumber,personid) values (3,3,1);
+
+select * from orders;
+
+select * from orders where personid=(select personid from persons where firstname='raji');

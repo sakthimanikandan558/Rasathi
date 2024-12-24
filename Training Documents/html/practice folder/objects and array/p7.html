@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem 7</title>
+</head>
+<body>
+  <h1>calculate the average of a student's grades</h1>
+  
+  <script>
+    
+    function calculateAverageGrades(student) {
+      let total = 0;
+      let grade;
+      for (grade of student.grades) {
+        total += grade;
+      }
+      return total / student.grades.length;
+    }
+    let student1 = {
+      name: "Bob",
+      grades: [80, 90, 75, 85]
+    };
+    
+    document.write("<p>Average Grade for " + student1.name + ": " + calculateAverageGrades(student1) + "</p>");
+
+  </script>
+</body>
+</html>

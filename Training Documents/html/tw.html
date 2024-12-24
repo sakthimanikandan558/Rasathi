@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Website</title>
+    <!-- Add Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- script for arrow -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- script for bar chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="overflow-x-hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-11 w-full">
+            <div class="sm:col-span-2">
+                <!-- Your existing content for the sidebar -->
+                <div class="col-span-2">
+                    <div class="logo mt-[17px] flex justify-center">
+                        <img class="h-[40px] " src="logo.jpeg" alt="no image">
+                        <p class="pl-1 mt-1 text-2xl font-extrabold">COMPANY</p>
+                    </div>
+    
+                    <div class="mt-[50px] gird grid-cols-2 flex justify-center">
+                        <div class="icon">
+                            <img src="dashboard.svg" alt="no image">
+                            <img class="mt-10" src="folder.svg" alt="no image">
+                            <img class="mt-10" src="book.svg" alt="no image">
+                            <img class="mt-10" src="calender.svg" alt="no image">
+                            <img class="mt-10" src="chat-bubble.svg" alt="no image">
+                            <img class="mt-10" src="edit.svg" alt="no image">
+                        </div>
+                        <div class="pl-6 mt-1 mname">
+                            <p>Dashboard</p>
+                            <p class="text-slate-300 mt-12">Classes</p>
+                            <p class="text-slate-300 mt-12">Resources</p>
+                            <p class="text-slate-300 mt-11">Learning Plan</p>
+                            <p class="text-slate-300 mt-11">Chat</p>
+                            <p class="text-slate-300 mt-11">Settings</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="sm:col-span-6 border bg-[#F5F5FB]">
+                <!-- Your existing content for the main section -->
+            </div>
+            <div class="sm:col-span-3 border">
+                <!-- Your existing content for the right sidebar -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

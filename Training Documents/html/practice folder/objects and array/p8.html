@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>problem 8</title>
+</head>
+<body>
+  <h1>Books Published Before Year</h1>
+  
+  <script>
+    
+    function getBooksPublishedBeforeYear(books, year) {
+      let booksBeforeYear = [];
+      for (let x of books) {
+        if (x.year < year) {
+          booksBeforeYear.push(x.title);
+        }
+      }
+      return booksBeforeYear;
+    }
+
+    let books = [
+      { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 2019 },
+      { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1995 },
+      { title: "1984", author: "George Orwell", year: 2022 },
+      { title: "Brave New World", author: "Aldous Huxley", year: 2015 }
+    ];
+
+    let year = 2020;
+
+   
+    document.write("<p>Books published before " + year + ":</p>");
+    document.write("<ul>");
+    let booksPublishedBeforeYear = getBooksPublishedBeforeYear(books, year);
+    for (let title of booksPublishedBeforeYear) {
+      document.write("<li>" + title + "</li>");
+    }
+    document.write("</ul>");
+  </script>
+</body>
+</html>

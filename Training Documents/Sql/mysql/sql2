@@ -1,0 +1,8 @@
+select * from Employee;
+select * from Employee order by empname asc;
+select empid from employee order by empid desc;
+select empname from Employee order by random() limit 2;
+select * from Employee order by empname,empid;
+update Employee set empsalary='20000' where empid='1375';
+select marital_status from Employee where marital_status is null;
+select marital_status from Employee where marital_status is not null;
